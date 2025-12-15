@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from '../App.js';
+import { PerformanceProvider } from './contexts/PerformanceContext';
+import App from '../App';
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <PerformanceProvider>
+      <App />
+    </PerformanceProvider>
   </React.StrictMode>,
 );
