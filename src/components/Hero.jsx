@@ -3,13 +3,36 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    filter: "blur(4px)"
+  },
   visible: {
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.7,
-      ease: [0.21, 0.32, 0.35, 1]
+      duration: 1.0,
+      ease: [0.23, 1, 0.32, 1],
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 20,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.23, 0.99, 0.6, 1]
     }
   }
 };
@@ -26,9 +49,10 @@ const Hero = ({ playSound }) => {
     >
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
           className="inline-block mb-8"
         >
           <div className="bg-[#e8d9c5] p-6 rounded-2xl border-4 border-dashed border-[#d4c0a1] inline-block shadow-xl relative">
@@ -40,9 +64,11 @@ const Hero = ({ playSound }) => {
         </motion.div>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
           className="text-xl md:text-2xl text-[#6a5d4d] max-w-3xl mx-auto mb-12 font-medium"
         >
           Cada pieza hecha con dedicación y cuidado, 100% libre de trigo, avena, cebada y centeno.
@@ -50,9 +76,21 @@ const Hero = ({ playSound }) => {
         </motion.p>
 
         <motion.div
-          whileHover={{ y: -5 }}
-          whileTap={{ scale: 0.98 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          whileHover={{ 
+            y: -8,
+            scale: 1.02,
+            transition: { duration: 0.2, ease: "easeOut" }
+          }}
+          whileTap={{ 
+            scale: 0.96,
+            transition: { duration: 0.1, ease: "easeIn" }
+          }}
           onClick={() => playSound('paperTear')}
+          transition={{ delay: 0.4 }}
           className="inline-block"
         >
           <div className="bg-[#e8d9c5] border-2 border-[#d4c0a1] rounded-xl shadow-lg px-8 py-4 cursor-pointer group">

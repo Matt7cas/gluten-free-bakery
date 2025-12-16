@@ -31,27 +31,55 @@ const Header = ({
     }
   };
 
+  const itemVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 20,
+      scale: 0.95
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.7,
+        ease: [0.23, 0.99, 0.6, 1]
+      }
+    },
+    hover: {
+      y: -5,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    }
+  };
+
   const paperVariants = {
     hidden: {
       opacity: 0,
-      y: 50,
-      rotate: -2
+      y: 60,
+      rotate: -3,
+      scale: 0.9
     },
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      rotate: i % 2 === 0 ? -1 : 1,
+      rotate: i % 2 === 0 ? -1.5 : 1.5,
+      scale: 1,
       transition: {
-        delay: i * 0.1,
-        duration: 0.6,
-        ease: [0.21, 0.32, 0.35, 1]
+        delay: i * 0.12,
+        duration: 0.8,
+        ease: [0.23, 0.99, 0.6, 1]
       }
     }),
     hover: {
-      y: -5,
+      y: -8,
       rotate: 0,
+      scale: 1.02,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeOut"
       }
     }
@@ -79,9 +107,10 @@ const Header = ({
       <nav className="fixed w-full z-40 px-4 py-3">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
             className="cursor-pointer"
             onClick={() => {
               playSound('paperRustle');
@@ -104,8 +133,16 @@ const Header = ({
             {['home', 'products', 'about', 'contact'].map((section) => (
               <motion.button
                 key={section}
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.95 }}
+                variants={itemVariants}
+                whileHover={{ 
+                  y: -5,
+                  scale: 1.03,
+                  transition: { duration: 0.2, ease: "easeOut" }
+                }}
+                whileTap={{ 
+                  scale: 0.94,
+                  transition: { duration: 0.1, ease: "easeIn" }
+                }}
                 onClick={() => {
                   playSound('paperRustle');
                   setActiveSection(section);
