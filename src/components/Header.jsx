@@ -95,7 +95,7 @@ const Header = ({
                   Panadería Sin TACC
                 </h1>
               </div>
-              <div className="absolute -bottom-1 -right-1 bg-[#d4c0a1] w-3/4 h-1 transform rotate-1"></div>
+              <div className="absolute -bottom-2 -right-2 w-full h-3 bg-[#d4c0a1]/30 -skew-x-12 -rotate-1 rounded-full -z-10"></div>
             </div>
           </motion.div>
 
