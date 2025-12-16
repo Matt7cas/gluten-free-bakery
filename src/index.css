@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+.font-handwritten {
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-sans {
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d4c0a1 #f8f3e6;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f8f3e6;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #d4c0a1;
+  border-radius: 10px;
+  border: 2px solid #f8f3e6;
+}
