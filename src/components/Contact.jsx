@@ -61,7 +61,7 @@ const Contact = ({ playSound }) => {
               Contáctanos
             </h2>
           </div>
-          <div className="absolute -bottom-1 -right-1 bg-[#d4c0a1] w-1/4 h-1 transform -rotate-1"></div>
+          <div className="absolute -bottom-2 -right-2 w-full h-4 bg-[#d4c0a1]/30 -skew-x-6 -rotate-1 rounded-full -z-10"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
@@ -99,8 +99,8 @@ const Contact = ({ playSound }) => {
                 <Mail className="w-6 h-6 text-[#8c5e37] mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-handwritten text-xl text-[#8c5e37] mb-1">Email</h3>
-                  <p className="text-[#6a5d4d]">hola@panaderiasintacc.com.ar</p>
-                  <p className="text-[#6a5d4d]">ventas@panaderiasintacc.com.ar</p>
+                  <p className="text-[#6a5d4d]">anana.com.ar</p>
+                  <p className="text-[#6a5d4d]">ventas@anana.com.ar</p>
                 </div>
               </div>
             </div>
@@ -137,8 +137,9 @@ const Contact = ({ playSound }) => {
                 en un ambiente seguro y libre de TACC"
               </p>
             </div>
-
-            <div className="absolute -bottom-2 -right-2 bg-[#d4c0a1] w-1/3 h-1 transform rotate-2"></div>
+          
+            {/* Washi Tape Decoration */}
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-[#e8d9c5] shadow-md -rotate-1 opacity-90 backdrop-blur-[1px] border border-[#d4c0a1]/50"></div>
           </motion.div>
         </div>
       </div>

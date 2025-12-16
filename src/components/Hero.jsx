@@ -57,9 +57,9 @@ const Hero = ({ playSound }) => {
         >
           <div className="bg-[#e8d9c5] p-6 rounded-2xl border-4 border-dashed border-[#d4c0a1] inline-block shadow-xl relative">
             <h1 className="text-4xl md:text-6xl font-handwritten text-[#8c5e37] leading-tight">
-              Panadería Artesanal SIN TACC
+              Date el gusto sin TACC
             </h1>
-            <div className="absolute -bottom-2 -right-2 bg-[#d4c0a1] w-1/2 h-1 transform rotate-2"></div>
+            <div className="absolute -top-3 -right-3 w-24 h-6 bg-[#d4c0a1]/40 transform rotate-3 rounded-sm z-0"></div>
           </div>
         </motion.div>
 
@@ -97,7 +97,6 @@ const Hero = ({ playSound }) => {
             <span className="text-lg md:text-xl font-medium text-[#8c5e37] group-hover:text-[#7a512e] transition-colors">
               Descubre nuestros productos
             </span>
-            <div className="absolute -bottom-1 -right-1 bg-[#d4c0a1] w-1/3 h-1 transform rotate-1"></div>
           </div>
         </motion.div>
       </div>

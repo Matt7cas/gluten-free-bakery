@@ -113,7 +113,8 @@ const Products = ({ playSound }) => {
               Nuestros Productos
             </h2>
           </div>
-          <div className="absolute -bottom-1 -right-1 bg-[#d4c0a1] w-1/4 h-1 transform -rotate-1"></div>
+          {/* Washi Tape Decoration */ }
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-40 h-8 bg-[#e8d9c5] shadow-sm -rotate-1 opacity-80 backdrop-blur-[1px] border border-[#d4c0a1]/40 z-20"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,7 +147,8 @@ const Products = ({ playSound }) => {
                   <ShieldCheck className="text-green-600 w-5 h-5" />
                 </div>
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-[#d4c0a1] w-1/3 h-1 transform rotate-2"></div>
+              {/* Sticker/Tape Effect */ }
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-16 h-4 bg-[#e8d9c5]/80 shadow-sm rotate-1 border border-[#d4c0a1]/30 z-10"></div>
             </motion.div>
           ))}
         </div>

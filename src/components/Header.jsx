@@ -121,10 +121,10 @@ const Header = ({
             <div className="relative">
               <div className="bg-[#e8d9c5] p-2 rounded-lg shadow-md border-2 border-[#d4c0a1]">
                 <h1 className="text-2xl md:text-3xl font-handwritten text-[#8c5e37] tracking-tight">
-                  Panadería Sin TACC
+                  Date el gusto sin TACC
                 </h1>
               </div>
-              <div className="absolute -bottom-1 -right-1 bg-[#d4c0a1] w-3/4 h-1 transform rotate-1"></div>
+              <div className="absolute -bottom-2 -right-2 w-full h-3 bg-[#d4c0a1]/30 -skew-x-12 -rotate-1 rounded-full -z-10"></div>
             </div>
           </motion.div>
 

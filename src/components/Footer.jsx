@@ -20,7 +20,7 @@ const Footer = ({ playSound }) => {
         </div>
 
         <p className="text-lg text-[#6a5d4d] max-w-3xl mx-auto mb-6">
-          © {new Date().getFullYear()} Panadería Sin TACC. Todos los productos son elaborados en un ambiente 100% libre de trigo, avena, cebada y centeno.
+          © {new Date().getFullYear()} Date el gusto sin TACC. Todos los productos son elaborados en un ambiente 100% libre de trigo, avena, cebada y centeno.
           Garantizamos la seguridad alimentaria para personas celíacas.
         </p>
 

@@ -2,7 +2,7 @@
 
 
 +++ README.md (修改后)
-# Panadería Sin TACC - Refactored
+# Date el gusto sin TACC - Refactored
 
 Una aplicación web mejorada para una panadería especializada en productos libres de gluten (TACC: Trigo, Avena, Cebada y Centeno).
 

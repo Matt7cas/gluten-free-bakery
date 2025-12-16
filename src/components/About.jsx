@@ -57,7 +57,10 @@ const About = () => {
           className="lg:w-1/2 relative"
         >
           <div className="bg-white p-8 rounded-2xl border-4 border-dashed border-[#d4c0a1] shadow-xl relative z-10">
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-[#e8d9c5] rounded-lg transform rotate-3"></div>
+            {/* Pin/Stamp Element */ }
+            <div className="absolute -top-5 -left-5 w-16 h-16 bg-[#e8d9c5] rounded-full border-4 border-dashed border-[#d4c0a1] shadow-md flex items-center justify-center transform -rotate-12 z-20">
+               <span className="text-2xl">🌾</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-handwritten text-[#8c5e37] mb-6">
               Comprometidos con tu salud
             </h2>
@@ -74,7 +77,8 @@ const About = () => {
               <ShieldCheck className="w-10 h-10 text-green-600" />
               <p className="text-lg font-medium text-[#8c5e37]">Certificación internacional SIN TACC</p>
             </div>
-            <div className="absolute -bottom-3 -right-3 bg-[#d4c0a1] w-1/2 h-1 transform rotate-1"></div>
+            {/* Washi Tape Decoration */ }
+             <div className="absolute -bottom-4 right-10 w-32 h-6 bg-[#d4c0a1]/40 transform -rotate-2 rounded-sm blur-[0.5px]"></div>
           </div>
         </motion.div>
 
@@ -111,7 +115,8 @@ const About = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute -top-3 -right-3 bg-[#c8b69d] w-1/3 h-1 transform rotate-2"></div>
+            {/* Corner Tape */ }
+            <div className="absolute -top-3 -right-3 w-24 h-8 bg-[#c8b69d]/50 transform rotate-6 shadow-sm backdrop-blur-[1px]"></div>
           </div>
         </motion.div>
       </div>
