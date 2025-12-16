@@ -76,8 +76,8 @@ const Contact = ({ playSound }) => {
                 <Mail className="w-6 h-6 text-[#8c5e37] mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-handwritten text-xl text-[#8c5e37] mb-1">Email</h3>
-                  <p className="text-[#6a5d4d]">hola@panaderiasintacc.com.ar</p>
-                  <p className="text-[#6a5d4d]">ventas@panaderiasintacc.com.ar</p>
+                  <p className="text-[#6a5d4d]">anana.com.ar</p>
+                  <p className="text-[#6a5d4d]">ventas@anana.com.ar</p>
                 </div>
               </div>
             </div>
