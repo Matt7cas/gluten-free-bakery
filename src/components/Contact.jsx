@@ -4,13 +4,36 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone } from 'lucide-react';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    filter: "blur(4px)"
+  },
   visible: {
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.7,
-      ease: [0.21, 0.32, 0.35, 1]
+      duration: 1.0,
+      ease: [0.23, 1, 0.32, 1],
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.23, 0.99, 0.6, 1]
     }
   }
 };
@@ -27,10 +50,10 @@ const Contact = ({ playSound }) => {
     >
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
           className="text-center mb-16 relative inline-block"
         >
           <div className="bg-[#e8d9c5] p-4 rounded-xl border-2 border-dashed border-[#d4c0a1] inline-block">
@@ -43,10 +66,10 @@ const Contact = ({ playSound }) => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
             className="space-y-6"
           >
             <div className="bg-[#f8f3e6] p-6 rounded-xl border-2 border-dashed border-[#d4c0a1]">
@@ -84,10 +107,10 @@ const Contact = ({ playSound }) => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
             className="bg-[#e8d9c5] p-8 rounded-2xl border-4 border-dashed border-[#d4c0a1] shadow-xl"
           >
             <h3 className="text-2xl font-handwritten text-[#8c5e37] mb-6 text-center">

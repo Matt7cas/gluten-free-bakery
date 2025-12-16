@@ -4,13 +4,19 @@ import { motion } from 'framer-motion';
 import { ShieldCheck } from 'lucide-react';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    filter: "blur(4px)"
+  },
   visible: {
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.7,
-      ease: [0.21, 0.32, 0.35, 1]
+      duration: 1.0,
+      ease: [0.23, 1, 0.32, 1],
+      staggerChildren: 0.1
     }
   }
 };
@@ -18,24 +24,27 @@ const sectionVariants = {
 const paperVariants = {
   hidden: {
     opacity: 0,
-    y: 50,
-    rotate: -2
+    y: 60,
+    rotate: -3,
+    scale: 0.9
   },
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    rotate: i % 2 === 0 ? -1 : 1,
+    rotate: i % 2 === 0 ? -1.5 : 1.5,
+    scale: 1,
     transition: {
-      delay: i * 0.1,
-      duration: 0.6,
-      ease: [0.21, 0.32, 0.35, 1]
+      delay: i * 0.12,
+      duration: 0.8,
+      ease: [0.23, 0.99, 0.6, 1]
     }
   }),
   hover: {
-    y: -5,
+    y: -10,
     rotate: 0,
+    scale: 1.02,
     transition: {
-      duration: 0.3,
+      duration: 0.4,
       ease: "easeOut"
     }
   }

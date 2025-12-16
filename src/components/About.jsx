@@ -4,13 +4,36 @@ import { motion } from 'framer-motion';
 import { WheatOff, ShieldCheck } from 'lucide-react';
 
 const sectionVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { 
+    opacity: 0, 
+    y: 40,
+    filter: "blur(4px)"
+  },
   visible: {
     opacity: 1,
     y: 0,
+    filter: "blur(0px)",
     transition: {
-      duration: 0.7,
-      ease: [0.21, 0.32, 0.35, 1]
+      duration: 1.0,
+      ease: [0.23, 1, 0.32, 1],
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.95
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.23, 0.99, 0.6, 1]
     }
   }
 };
@@ -27,10 +50,10 @@ const About = () => {
     >
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
           className="lg:w-1/2 relative"
         >
           <div className="bg-white p-8 rounded-2xl border-4 border-dashed border-[#d4c0a1] shadow-xl relative z-10">
@@ -56,10 +79,10 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={itemVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
           className="lg:w-1/2 flex justify-center"
         >
           <div className="relative">
